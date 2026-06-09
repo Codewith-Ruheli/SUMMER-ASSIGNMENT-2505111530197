@@ -1,9 +1,10 @@
 
 #recursive fibonacci
-def fib(n)
-    
+def fib(n):
     if n<=1:
         return n
     return fib(n-1)+fib(n-2)
-n=int(input("enter n:"))
-print("fibonacci term=",fib(n))
+n= int(input("enter n:"))
+print("fibonacci term =",fib(n))
+
+    
