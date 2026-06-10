@@ -1,8 +1,9 @@
 
-#recursive sum of digit
-def sum_digits(n):
-    if n == 0:
-        return 0
-    return n%10+ sum_digits(n//10)
-num=int(input("enter a number"))
-print("sum of digit=",sum_digits(num))
+#recursive reverse number
+n=int(input("enter a num:"))
+def reverse_num(n, rev=0):
+     if n == 0:
+
+          return reverse_num(n//10,rev*10+n%10)
+     print("reversed number=",reverse_num(num))
+
