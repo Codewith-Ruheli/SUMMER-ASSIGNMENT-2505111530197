@@ -1,8 +1,4 @@
-#Write funtion for fibonacci
-def fibonacci(n):
-    a,b=0,1
-    for i in range(n):
-        print(a,end="")
-        a,b=b,a+b
-        num=int(input("enter a number of terms:"))
-        fibonacci(n)
+#find second largest element
+arr=[2,3,4,5,9]
+arr.sort()
+print("second largest elemnt=",arr[-3])

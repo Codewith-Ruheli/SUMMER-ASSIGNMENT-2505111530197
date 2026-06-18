@@ -1,15 +1,10 @@
-#Write function for armstrong
-def armstrong(n):
-    s=0
-    temp = n
-    while n>0:
-        digit =n%10
-        s=s+digit**3
-        
-        n=n//10
-        if n==s:
-            print("armstrong number")
-        else:
-            print("not armstrong number")
-            num=int(input("enter a number:"))
-            armstrong(num)
+#frequency of an element
+arr=[1,2,3,4,5,6]
+a=int(input("enter element:"))
+count = 0
+for i in arr:
+    if i in arr:
+        if i == a:
+            count +=1
+            print("frequency of",a,"is",count)
+
