@@ -1,15 +1,10 @@
-#moves zero to end
-arr = [1, 0, 2, 0, 3, 4, 0, 5]
+#remove duplicates from array
+arr = [1, 2, 2, 3, 4, 4, 5]
 
-result = []
+new_arr = []
 
 for i in arr:
-    if i != 0:
-        result.append(i)
+    if i not in new_arr:
+        new_arr.append(i)
 
-zero_count = arr.count(0)
-
-for i in range(zero_count):
-    result.append(0)
-
-print("Array after moving zeroes:", result)
+print("Array after removing duplicates:", new_arr)
