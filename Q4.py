@@ -1,6 +1,15 @@
-#find duplicate in an array
-arr = [3,4,3,55,6,7]
+#moves zero to end
+arr = [1, 0, 2, 0, 3, 4, 0, 5]
+
+result = []
+
 for i in arr:
-    if arr.count(i)>1:
-        print(i)
-        
+    if i != 0:
+        result.append(i)
+
+zero_count = arr.count(0)
+
+for i in range(zero_count):
+    result.append(0)
+
+print("Array after moving zeroes:", result)

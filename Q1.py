@@ -1,8 +1,3 @@
-#to input and display array
-n=int(input("enter number of element:"))
-arr=[]
-for i in range(n):
-    x=int(input("enter element:"))
-    print("array elements are:")
-    for i in arr:
-        print(i,end="")
+#reverse array
+arr=[1,3,45,6,9]
+print("reversed array:",arr[::-1])
