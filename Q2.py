@@ -1,14 +1,7 @@
-#maximum frequency element
-arr = [1, 2, 2, 3, 3, 3, 4]
+#to union of arrays
+arr1 = [1, 2, 3, 4]
+arr2 = [3, 4, 5, 6]
 
-max_freq = 0
-element = 0
+union = list(set(arr1 + arr2))
 
-for i in arr:
-    freq = arr.count(i)
-    if freq > max_freq:
-        max_freq = freq
-        element = i
-
-print("Maximum frequency element:", element)
-print("Frequency:", max_freq)
+print("Union of arrays:", union)

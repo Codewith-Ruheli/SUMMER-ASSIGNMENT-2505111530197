@@ -1,9 +1,7 @@
-#find missing number in array
-arr = [1, 2, 3, 5]
+#TO MERGES ARRAYS
+arr1 = [1, 2, 3]
+arr2 = [4, 5, 6]
 
-n = 5
+arr3 = arr1 + arr2
 
-total = n * (n + 1) // 2
-missing = total - sum(arr)
-
-print("Missing number is:", missing)
+print("Merged Array:", arr3)
