@@ -1,18 +1,5 @@
-#check symmetric matrix
-A = [[1, 2, 3],
-     [2, 4, 5],
-     [3, 5, 6]]
+#print multiplication table of a given number
+n = int(input("Enter a number: "))
 
-symmetric = True
-
-for i in range(len(A)):
-    for j in range(len(A)):
-        if A[i][j] != A[j][i]:
-            symmetric = False
-            break
-
-if symmetric:
-    print("Matrix is Symmetric")
-else:
-    print("Matrix is Not Symmetric")
-    
+for i in range(1, 11):
+    print(n, "x", i, "=", n * i)
