@@ -1,27 +1,17 @@
-#binary search
-def binary_search(arr, key):
-    low = 0
-    high = len(arr) - 1
+#transpose matrix
+# Original matrix
+A = [[1, 2, 3],
+     [4, 5, 6]]
 
-    while low <= high:
-        mid = (low + high) // 2
+# Transpose matrix
+transpose = [[0, 0],
+             [0, 0],
+             [0, 0]]
 
-        if arr[mid] == key:
-            return mid
-        elif arr[mid] < key:
-            low = mid + 1
-        else:
-            high = mid - 1
+for i in range(len(A)):
+    for j in range(len(A[0])):
+        transpose[j][i] = A[i][j]
 
-    return -1
-
-# Example
-arr = [10, 20, 30, 40, 50, 60]
-key = 40
-
-result = binary_search(arr, key)
-
-if result != -1:
-    print("Element found at index", result)
-else:
-    print("Element not found")
+print("Transpose of matrix:")
+for row in transpose:
+    print(row)

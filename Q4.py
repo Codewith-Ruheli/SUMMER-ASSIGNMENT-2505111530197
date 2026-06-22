@@ -1,6 +1,12 @@
-#sort array in descending order
-arr = [10, 5, 8, 20, 15]
+#find diagonal sum
+# 3x3 matrix
+A = [[1, 2, 3],
+     [4, 5, 6],
+     [7, 8, 9]]
 
-arr.sort(reverse=True)
+diagonal_sum = 0
 
-print("Sorted array in descending order:", arr)
+for i in range(len(A)):
+    diagonal_sum += A[i][i]
+
+print("Sum of diagonal elements =", diagonal_sum)

@@ -1,11 +1,22 @@
-#bubble sort
-arr = [5, 2, 8, 1, 9]
+#Wap to add matrices
+# First matrix
+A = [[1, 2, 3],
+     [4, 5, 6]]
 
-n = len(arr)
+# Second matrix
+B = [[7, 8, 9],
+     [1, 2, 3]]
 
-for i in range(n):
-    for j in range(0, n - i - 1):
-        if arr[j] > arr[j + 1]:
-            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+# Result matrix
+result = [[0, 0, 0],
+          [0, 0, 0]]
 
-print("Sorted array:", arr)
+# Adding matrices
+for i in range(len(A)):
+    for j in range(len(A[0])):
+        result[i][j] = A[i][j] + B[i][j]
+
+# Print result
+print("Sum of matrices:")
+for row in result:
+    print(row)

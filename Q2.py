@@ -1,18 +1,22 @@
-#selection sort
-def selection_sort(arr):
-    n = len(arr)
+#subract matrices
+# First matrix
+A = [[7, 8, 9],
+     [4, 5, 6]]
 
-    for i in range(n):
-        min_index = i
+# Second matrix
+B = [[1, 2, 3],
+     [1, 2, 3]]
 
-        for j in range(i + 1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
+# Result matrix
+result = [[0, 0, 0],
+          [0, 0, 0]]
 
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+# Subtracting matrices
+for i in range(len(A)):
+    for j in range(len(A[0])):
+        result[i][j] = A[i][j] - B[i][j]
 
-    return arr
-
-# Example
-arr = [64, 25, 12, 22, 11]
-print(selection_sort(arr))
+# Print result
+print("Difference of matrices:")
+for row in result:
+    print(row)
