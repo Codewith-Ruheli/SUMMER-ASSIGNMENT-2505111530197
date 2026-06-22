@@ -1,4 +1,11 @@
-#to convert lowercase to uppercase
+#character frequency
 string = input("Enter a string: ")
+ch = input("Enter a character: ")
 
-print("Uppercase:", string.upper())
+count = 0
+
+for i in string:
+    if i == ch:
+        count += 1
+
+print("Frequency of", ch, "=", count)

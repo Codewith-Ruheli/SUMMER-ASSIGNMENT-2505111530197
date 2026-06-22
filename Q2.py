@@ -1,6 +1,6 @@
-#reverse a string
-string = input("Enter a string: ")
+#count words in a sentence
+sentence = input("Enter a sentence: ")
 
-reverse = string[::-1]
+words = sentence.split()
 
-print("Reversed string =", reverse)
+print("Number of words =", len(words))

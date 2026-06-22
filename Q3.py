@@ -1,15 +1,11 @@
-#to count vowels and consonants
+#character frequency
 string = input("Enter a string: ")
+ch = input("Enter a character: ")
 
-vowels = 0
-consonants = 0
+count = 0
 
-for ch in string.lower():
-    if ch.isalpha():
-        if ch in "aeiou":
-            vowels += 1
-        else:
-            consonants += 1
+for i in string:
+    if i == ch:
+        count += 1
 
-print("Vowels =", vowels)
-print("Consonants =", consonants)
+print("Frequency of", ch, "=", count)

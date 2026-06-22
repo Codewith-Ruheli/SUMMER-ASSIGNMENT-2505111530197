@@ -1,8 +1,7 @@
-#find string length without strlen().
+#check palindrome string
 string = input("Enter a string: ")
 
-count = 0
-for ch in string:
-    count += 1
-
-print("Length of string =", count)
+if string == string[::-1]:
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
