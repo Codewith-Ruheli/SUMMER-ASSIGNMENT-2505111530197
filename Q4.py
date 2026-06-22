@@ -1,7 +1,6 @@
-#to find common element
-arr1 = [1, 2, 3, 4, 5]
-arr2 = [3, 4, 5, 6, 7]
+#sort array in descending order
+arr = [10, 5, 8, 20, 15]
 
-for i in arr1:
-    if i in arr2:
-        print(i, end=" ")
+arr.sort(reverse=True)
+
+print("Sorted array in descending order:", arr)
