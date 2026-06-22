@@ -1,12 +1,10 @@
-#find diagonal sum
-# 3x3 matrix
+#find column wise sum
 A = [[1, 2, 3],
      [4, 5, 6],
      [7, 8, 9]]
 
-diagonal_sum = 0
-
-for i in range(len(A)):
-    diagonal_sum += A[i][i]
-
-print("Sum of diagonal elements =", diagonal_sum)
+for j in range(len(A[0])):
+    col_sum = 0
+    for i in range(len(A)):
+        col_sum += A[i][j]
+    print("Sum of column", j + 1, "=", col_sum)

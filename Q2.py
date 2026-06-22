@@ -1,22 +1,18 @@
-#subract matrices
-# First matrix
-A = [[7, 8, 9],
-     [4, 5, 6]]
+#check symmetric matrix
+A = [[1, 2, 3],
+     [2, 4, 5],
+     [3, 5, 6]]
 
-# Second matrix
-B = [[1, 2, 3],
-     [1, 2, 3]]
+symmetric = True
 
-# Result matrix
-result = [[0, 0, 0],
-          [0, 0, 0]]
-
-# Subtracting matrices
 for i in range(len(A)):
-    for j in range(len(A[0])):
-        result[i][j] = A[i][j] - B[i][j]
+    for j in range(len(A)):
+        if A[i][j] != A[j][i]:
+            symmetric = False
+            break
 
-# Print result
-print("Difference of matrices:")
-for row in result:
-    print(row)
+if symmetric:
+    print("Matrix is Symmetric")
+else:
+    print("Matrix is Not Symmetric")
+    
