@@ -1,11 +1,8 @@
-#character frequency
-string = input("Enter a string: ")
-ch = input("Enter a character: ")
+#check anagram strings
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
 
-count = 0
-
-for i in string:
-    if i == ch:
-        count += 1
-
-print("Frequency of", ch, "=", count)
+if sorted(str1) == sorted(str2):
+    print("Anagram")
+else:
+    print("Not Anagram")

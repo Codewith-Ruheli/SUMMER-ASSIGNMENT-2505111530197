@@ -1,7 +1,9 @@
-#check palindrome string
+#first non repeating character
 string = input("Enter a string: ")
 
-if string == string[::-1]:
-    print("Palindrome")
+for ch in string:
+    if string.count(ch) == 1:
+        print("First non-repeating character:", ch)
+        break
 else:
-    print("Not a Palindrome")
+    print("No non-repeating character found")

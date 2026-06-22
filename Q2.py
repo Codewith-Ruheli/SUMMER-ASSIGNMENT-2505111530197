@@ -1,6 +1,12 @@
-#count words in a sentence
-sentence = input("Enter a sentence: ")
+#first  repeating character
+string = input("Enter a string: ")
 
-words = sentence.split()
+seen = set()
 
-print("Number of words =", len(words))
+for ch in string:
+    if ch in seen:
+        print("First repeating character:", ch)
+        break
+    seen.add(ch)
+else:
+    print("No repeating character found")

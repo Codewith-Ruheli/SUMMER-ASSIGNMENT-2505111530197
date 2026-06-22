@@ -1,11 +1,14 @@
-#character frequency
+#find max occuring charcter
 string = input("Enter a string: ")
-ch = input("Enter a character: ")
 
-count = 0
+max_char = ''
+max_count = 0
 
-for i in string:
-    if i == ch:
-        count += 1
+for ch in string:
+    count = string.count(ch)
+    if count > max_count:
+        max_count = count
+        max_char = ch
 
-print("Frequency of", ch, "=", count)
+print("Maximum occurring character:", max_char)
+print("Frequency:", max_count)
