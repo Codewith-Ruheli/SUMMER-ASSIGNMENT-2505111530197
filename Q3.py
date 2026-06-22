@@ -1,9 +1,15 @@
-#find factorial of a number
-n = int(input("Enter a number: "))
+#to count vowels and consonants
+string = input("Enter a string: ")
 
-fact = 1
+vowels = 0
+consonants = 0
 
-for i in range(1, n + 1):
-    fact = fact * i
+for ch in string.lower():
+    if ch.isalpha():
+        if ch in "aeiou":
+            vowels += 1
+        else:
+            consonants += 1
 
-print("Factorial =", fact)
+print("Vowels =", vowels)
+print("Consonants =", consonants)

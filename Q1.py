@@ -1,8 +1,8 @@
-#calculate sum of first N natural number
-n = int(input("Enter N: "))
+#find string length without strlen().
+string = input("Enter a string: ")
 
-sum = 0
-for i in range(1, n + 1):
-    sum += i
+count = 0
+for ch in string:
+    count += 1
 
-print("Sum =", sum)
+print("Length of string =", count)
