@@ -1,9 +1,10 @@
-#first non repeating character
-string = input("Enter a string: ")
+#to check string rotation 
+# Check string rotation
 
-for ch in string:
-    if string.count(ch) == 1:
-        print("First non-repeating character:", ch)
-        break
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
+
+if len(str1) == len(str2) and str2 in (str1 + str1):
+    print("String is a rotation.")
 else:
-    print("No non-repeating character found")
+    print("String is not a rotation.")

@@ -1,14 +1,12 @@
-#find max occuring charcter
-string = input("Enter a string: ")
+#to remove duplicate characters
+# Remove duplicate characters
 
-max_char = ''
-max_count = 0
+s = input("Enter a string: ")
 
-for ch in string:
-    count = string.count(ch)
-    if count > max_count:
-        max_count = count
-        max_char = ch
+result = ""
 
-print("Maximum occurring character:", max_char)
-print("Frequency:", max_count)
+for ch in s:
+    if ch not in result:
+        result += ch
+
+print("String after removing duplicates:", result)

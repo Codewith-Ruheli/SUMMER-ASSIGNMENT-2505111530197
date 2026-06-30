@@ -1,8 +1,15 @@
-#check anagram strings
-str1 = input("Enter first string: ")
-str2 = input("Enter second string: ")
+#to find longest word
+# Find the longest word
 
-if sorted(str1) == sorted(str2):
-    print("Anagram")
-else:
-    print("Not Anagram")
+sentence = input("Enter a sentence: ")
+
+words = sentence.split()
+
+longest = words[0]
+
+for word in words:
+    if len(word) > len(longest):
+        longest = word
+
+print("Longest word:", longest)
+print("Length:", len(longest))
