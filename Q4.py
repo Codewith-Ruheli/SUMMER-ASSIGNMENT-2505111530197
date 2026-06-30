@@ -1,29 +1,38 @@
-# Quiz Application
+# Marksheet Generation System
 
-score = 0
+name = input("Enter Student Name: ")
+roll = input("Enter Roll Number: ")
 
-print("Welcome to the Quiz!\n")
+sub1 = float(input("Enter marks of Subject 1: "))
+sub2 = float(input("Enter marks of Subject 2: "))
+sub3 = float(input("Enter marks of Subject 3: "))
+sub4 = float(input("Enter marks of Subject 4: "))
+sub5 = float(input("Enter marks of Subject 5: "))
 
-answer = input("1. What is the capital of India? ")
-if answer.lower() == "delhi":
-    print("Correct!")
-    score += 1
+total = sub1 + sub2 + sub3 + sub4 + sub5
+percentage = total / 5
+
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 80:
+    grade = "A"
+elif percentage >= 70:
+    grade = "B"
+elif percentage >= 60:
+    grade = "C"
+elif percentage >= 50:
+    grade = "D"
 else:
-    print("Wrong! Correct answer is Delhi.")
+    grade = "F"
 
-answer = input("\n2. Which language is used for AI and ML? ")
-if answer.lower() == "python":
-    print("Correct!")
-    score += 1
+print("\n----- Marksheet -----")
+print("Student Name :", name)
+print("Roll Number  :", roll)
+print("Total Marks  :", total, "/500")
+print("Percentage   :", percentage, "%")
+print("Grade        :", grade)
+
+if grade == "F":
+    print("Result       : Fail")
 else:
-    print("Wrong! Correct answer is Python.")
-
-answer = input("\n3. How many days are there in a week? ")
-if answer == "7":
-    print("Correct!")
-    score += 1
-else:
-    print("Wrong! Correct answer is 7.")
-
-print("\nQuiz Completed!")
-print("Your Score:", score, "/3")
+    print("Result       : Pass")
