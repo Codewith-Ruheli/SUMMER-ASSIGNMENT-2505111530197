@@ -1,60 +1,48 @@
-# Menu Driven Array Operations System
+# Mini Library System
 
-arr = []
+books = []
 
 while True:
-    print("\n----- Array Operations -----")
-    print("1. Insert Element")
-    print("2. Display Array")
-    print("3. Search Element")
-    print("4. Delete Element")
-    print("5. Find Maximum")
-    print("6. Find Minimum")
-    print("7. Exit")
+    print("\n----- Mini Library System -----")
+    print("1. Add Book")
+    print("2. View Books")
+    print("3. Search Book")
+    print("4. Remove Book")
+    print("5. Exit")
 
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
-        element = int(input("Enter element to insert: "))
-        arr.append(element)
-        print("Element inserted successfully!")
+        book = input("Enter Book Name: ")
+        books.append(book)
+        print("Book added successfully!")
 
     elif choice == 2:
-        if len(arr) == 0:
-            print("Array is empty.")
+        if len(books) == 0:
+            print("Library is empty.")
         else:
-            print("Array:", arr)
+            print("\nAvailable Books:")
+            for book in books:
+                print(book)
 
     elif choice == 3:
-        element = int(input("Enter element to search: "))
-        if element in arr:
-            print("Element found at index", arr.index(element))
+        book = input("Enter Book Name to search: ")
+        if book in books:
+            print("Book is available.")
         else:
-            print("Element not found.")
+            print("Book not found.")
 
     elif choice == 4:
-        element = int(input("Enter element to delete: "))
-        if element in arr:
-            arr.remove(element)
-            print("Element deleted successfully!")
+        book = input("Enter Book Name to remove: ")
+        if book in books:
+            books.remove(book)
+            print("Book removed successfully!")
         else:
-            print("Element not found.")
+            print("Book not found.")
 
     elif choice == 5:
-        if len(arr) == 0:
-            print("Array is empty.")
-        else:
-            print("Maximum element:", max(arr))
-
-    elif choice == 6:
-        if len(arr) == 0:
-            print("Array is empty.")
-        else:
-            print("Minimum element:", min(arr))
-
-    elif choice == 7:
         print("Thank you!")
         break
 
     else:
-        print("Invalid choice! Please try again.")
+        print("Invalid choice!")
