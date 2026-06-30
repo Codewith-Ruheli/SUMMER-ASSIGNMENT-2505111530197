@@ -1,26 +1,16 @@
-#to merge two sorted arrays
+# Number Guessing Game
 
+import random
 
-arr1 = list(map(int, input("Enter first sorted array: ").split()))
-arr2 = list(map(int, input("Enter second sorted array: ").split()))
+number = random.randint(1, 10)
 
-merged = []
-i = j = 0
+while True:
+    guess = int(input("Guess a number (1-10): "))
 
-while i < len(arr1) and j < len(arr2):
-    if arr1[i] < arr2[j]:
-        merged.append(arr1[i])
-        i += 1
+    if guess == number:
+        print("Congratulations! You guessed the correct number.")
+        break
+    elif guess < number:
+        print("Too low! Try again.")
     else:
-        merged.append(arr2[j])
-        j += 1
-
-while i < len(arr1):
-    merged.append(arr1[i])
-    i += 1
-
-while j < len(arr2):
-    merged.append(arr2[j])
-    j += 1
-
-print("Merged Sorted Array:", merged)
+        print("Too high! Try again.")

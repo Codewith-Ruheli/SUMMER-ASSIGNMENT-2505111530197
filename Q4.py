@@ -1,11 +1,29 @@
-#to sort words by length
+# Quiz Application
 
+score = 0
 
-words = input("Enter words separated by space: ").split()
+print("Welcome to the Quiz!\n")
 
-words.sort(key=len)
+answer = input("1. What is the capital of India? ")
+if answer.lower() == "delhi":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct answer is Delhi.")
 
-print("Words sorted by length:")
-for word in words:
-    print(word)
+answer = input("\n2. Which language is used for AI and ML? ")
+if answer.lower() == "python":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct answer is Python.")
 
+answer = input("\n3. How many days are there in a week? ")
+if answer == "7":
+    print("Correct!")
+    score += 1
+else:
+    print("Wrong! Correct answer is 7.")
+
+print("\nQuiz Completed!")
+print("Your Score:", score, "/3")
