@@ -1,41 +1,61 @@
-# Menu Driven String Operations System
+# Inventory Management System
 
-string = input("Enter a string: ")
+inventory = {}
 
 while True:
-    print("\n----- String Operations -----")
-    print("1. Display String")
-    print("2. Find Length")
-    print("3. Convert to Uppercase")
-    print("4. Convert to Lowercase")
-    print("5. Reverse String")
-    print("6. Check Palindrome")
-    print("7. Exit")
+    print("\n----- Inventory Management System -----")
+    print("1. Add Product")
+    print("2. View Products")
+    print("3. Search Product")
+    print("4. Update Quantity")
+    print("5. Delete Product")
+    print("6. Exit")
 
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
-        print("String:", string)
+        product_id = input("Enter Product ID: ")
+        product_name = input("Enter Product Name: ")
+        quantity = int(input("Enter Quantity: "))
+        inventory[product_id] = {"Name": product_name, "Quantity": quantity}
+        print("Product added successfully!")
 
     elif choice == 2:
-        print("Length:", len(string))
+        if len(inventory) == 0:
+            print("No products available.")
+        else:
+            print("\nInventory:")
+            for product_id, details in inventory.items():
+                print("ID:", product_id,
+                      "Name:", details["Name"],
+                      "Quantity:", details["Quantity"])
 
     elif choice == 3:
-        print("Uppercase:", string.upper())
+        product_id = input("Enter Product ID to search: ")
+        if product_id in inventory:
+            print("Product Name:", inventory[product_id]["Name"])
+            print("Quantity:", inventory[product_id]["Quantity"])
+        else:
+            print("Product not found.")
 
     elif choice == 4:
-        print("Lowercase:", string.lower())
+        product_id = input("Enter Product ID: ")
+        if product_id in inventory:
+            quantity = int(input("Enter New Quantity: "))
+            inventory[product_id]["Quantity"] = quantity
+            print("Quantity updated successfully!")
+        else:
+            print("Product not found.")
 
     elif choice == 5:
-        print("Reversed String:", string[::-1])
+        product_id = input("Enter Product ID to delete: ")
+        if product_id in inventory:
+            del inventory[product_id]
+            print("Product deleted successfully!")
+        else:
+            print("Product not found.")
 
     elif choice == 6:
-        if string == string[::-1]:
-            print("The string is a palindrome.")
-        else:
-            print("The string is not a palindrome.")
-
-    elif choice == 7:
         print("Thank you!")
         break
 
