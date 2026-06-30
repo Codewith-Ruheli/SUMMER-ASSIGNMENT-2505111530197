@@ -1,38 +1,43 @@
-# Marksheet Generation System
+# Menu Driven String Operations System
 
-name = input("Enter Student Name: ")
-roll = input("Enter Roll Number: ")
+string = input("Enter a string: ")
 
-sub1 = float(input("Enter marks of Subject 1: "))
-sub2 = float(input("Enter marks of Subject 2: "))
-sub3 = float(input("Enter marks of Subject 3: "))
-sub4 = float(input("Enter marks of Subject 4: "))
-sub5 = float(input("Enter marks of Subject 5: "))
+while True:
+    print("\n----- String Operations -----")
+    print("1. Display String")
+    print("2. Find Length")
+    print("3. Convert to Uppercase")
+    print("4. Convert to Lowercase")
+    print("5. Reverse String")
+    print("6. Check Palindrome")
+    print("7. Exit")
 
-total = sub1 + sub2 + sub3 + sub4 + sub5
-percentage = total / 5
+    choice = int(input("Enter your choice: "))
 
-if percentage >= 90:
-    grade = "A+"
-elif percentage >= 80:
-    grade = "A"
-elif percentage >= 70:
-    grade = "B"
-elif percentage >= 60:
-    grade = "C"
-elif percentage >= 50:
-    grade = "D"
-else:
-    grade = "F"
+    if choice == 1:
+        print("String:", string)
 
-print("\n----- Marksheet -----")
-print("Student Name :", name)
-print("Roll Number  :", roll)
-print("Total Marks  :", total, "/500")
-print("Percentage   :", percentage, "%")
-print("Grade        :", grade)
+    elif choice == 2:
+        print("Length:", len(string))
 
-if grade == "F":
-    print("Result       : Fail")
-else:
-    print("Result       : Pass")
+    elif choice == 3:
+        print("Uppercase:", string.upper())
+
+    elif choice == 4:
+        print("Lowercase:", string.lower())
+
+    elif choice == 5:
+        print("Reversed String:", string[::-1])
+
+    elif choice == 6:
+        if string == string[::-1]:
+            print("The string is a palindrome.")
+        else:
+            print("The string is not a palindrome.")
+
+    elif choice == 7:
+        print("Thank you!")
+        break
+
+    else:
+        print("Invalid choice! Please try again.")

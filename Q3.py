@@ -1,63 +1,43 @@
-# Salary Management System
+# Menu Driven String Operations System
 
-employees = {}
+string = input("Enter a string: ")
 
 while True:
-    print("\n----- Salary Management System -----")
-    print("1. Add Employee")
-    print("2. View Employees")
-    print("3. Search Employee")
-    print("4. Update Salary")
-    print("5. Delete Employee")
-    print("6. Exit")
+    print("\n----- String Operations -----")
+    print("1. Display String")
+    print("2. Find Length")
+    print("3. Convert to Uppercase")
+    print("4. Convert to Lowercase")
+    print("5. Reverse String")
+    print("6. Check Palindrome")
+    print("7. Exit")
 
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
-        emp_id = input("Enter Employee ID: ")
-        name = input("Enter Employee Name: ")
-        salary = float(input("Enter Salary: "))
-        employees[emp_id] = {"Name": name, "Salary": salary}
-        print("Employee added successfully!")
+        print("String:", string)
 
     elif choice == 2:
-        if len(employees) == 0:
-            print("No employee records found.")
-        else:
-            print("\nEmployee Records:")
-            for emp_id, details in employees.items():
-                print("ID:", emp_id,
-                      " Name:", details["Name"],
-                      " Salary:", details["Salary"])
+        print("Length:", len(string))
 
     elif choice == 3:
-        emp_id = input("Enter Employee ID to search: ")
-        if emp_id in employees:
-            print("Name:", employees[emp_id]["Name"])
-            print("Salary:", employees[emp_id]["Salary"])
-        else:
-            print("Employee not found.")
+        print("Uppercase:", string.upper())
 
     elif choice == 4:
-        emp_id = input("Enter Employee ID: ")
-        if emp_id in employees:
-            new_salary = float(input("Enter New Salary: "))
-            employees[emp_id]["Salary"] = new_salary
-            print("Salary updated successfully!")
-        else:
-            print("Employee not found.")
+        print("Lowercase:", string.lower())
 
     elif choice == 5:
-        emp_id = input("Enter Employee ID to delete: ")
-        if emp_id in employees:
-            del employees[emp_id]
-            print("Employee deleted successfully!")
-        else:
-            print("Employee not found.")
+        print("Reversed String:", string[::-1])
 
     elif choice == 6:
+        if string == string[::-1]:
+            print("The string is a palindrome.")
+        else:
+            print("The string is not a palindrome.")
+
+    elif choice == 7:
         print("Thank you!")
         break
 
     else:
-        print("Invalid choice!")
+        print("Invalid choice! Please try again.")

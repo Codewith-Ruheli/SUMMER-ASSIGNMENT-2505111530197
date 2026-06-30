@@ -1,48 +1,59 @@
-# Employee Management System
+# Menu Driven Array Operations System
 
-employees = {}
+arr = []
 
 while True:
-    print("\n----- Employee Management System -----")
-    print("1. Add Employee")
-    print("2. View Employees")
-    print("3. Search Employee")
-    print("4. Delete Employee")
-    print("5. Exit")
+    print("\n----- Array Operations -----")
+    print("1. Insert Element")
+    print("2. Display Array")
+    print("3. Search Element")
+    print("4. Delete Element")
+    print("5. Find Maximum")
+    print("6. Find Minimum")
+    print("7. Exit")
 
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
-        emp_id = input("Enter Employee ID: ")
-        name = input("Enter Employee Name: ")
-        employees[emp_id] = name
-        print("Employee added successfully!")
+        element = int(input("Enter element to insert: "))
+        arr.append(element)
+        print("Element inserted successfully!")
 
     elif choice == 2:
-        if len(employees) == 0:
-            print("No employee records found.")
+        if len(arr) == 0:
+            print("Array is empty.")
         else:
-            print("\nEmployee Records:")
-            for emp_id, name in employees.items():
-                print("Employee ID:", emp_id, " Name:", name)
+            print("Array:", arr)
 
     elif choice == 3:
-        emp_id = input("Enter Employee ID to search: ")
-        if emp_id in employees:
-            print("Employee Name:", employees[emp_id])
+        element = int(input("Enter element to search: "))
+        if element in arr:
+            print("Element found at index", arr.index(element))
         else:
-            print("Employee not found.")
+            print("Element not found.")
 
     elif choice == 4:
-        emp_id = input("Enter Employee ID to delete: ")
-        if emp_id in employees:
-            del employees[emp_id]
-            print("Employee record deleted.")
+        element = int(input("Enter element to delete: "))
+        if element in arr:
+            arr.remove(element)
+            print("Element deleted successfully!")
         else:
-            print("Employee not found.")
+            print("Element not found.")
 
     elif choice == 5:
-        print("Exiting program...")
+        if len(arr) == 0:
+            print("Array is empty.")
+        else:
+            print("Maximum element:", max(arr))
+
+    elif choice == 6:
+        if len(arr) == 0:
+            print("Array is empty.")
+        else:
+            print("Minimum element:", min(arr))
+
+    elif choice == 7:
+        print("Thank you!")
         break
 
     else:
