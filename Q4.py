@@ -1,12 +1,11 @@
-#to remove duplicate characters
-# Remove duplicate characters
+#to sort words by length
 
-s = input("Enter a string: ")
 
-result = ""
+words = input("Enter words separated by space: ").split()
 
-for ch in s:
-    if ch not in result:
-        result += ch
+words.sort(key=len)
 
-print("String after removing duplicates:", result)
+print("Words sorted by length:")
+for word in words:
+    print(word)
+

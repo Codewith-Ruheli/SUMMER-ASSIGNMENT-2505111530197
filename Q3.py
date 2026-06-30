@@ -1,15 +1,8 @@
-#to find longest word
-# Find the longest word
+#to sort name alphabetically
+names = input("Enter names separated by space: ").split()
 
-sentence = input("Enter a sentence: ")
+names.sort()
 
-words = sentence.split()
-
-longest = words[0]
-
-for word in words:
-    if len(word) > len(longest):
-        longest = word
-
-print("Longest word:", longest)
-print("Length:", len(longest))
+print("Names in alphabetical order:")
+for name in names:
+    print(name)

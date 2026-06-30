@@ -1,10 +1,26 @@
-#to check string rotation 
-# Check string rotation
+#to merge two sorted arrays
 
-str1 = input("Enter first string: ")
-str2 = input("Enter second string: ")
 
-if len(str1) == len(str2) and str2 in (str1 + str1):
-    print("String is a rotation.")
-else:
-    print("String is not a rotation.")
+arr1 = list(map(int, input("Enter first sorted array: ").split()))
+arr2 = list(map(int, input("Enter second sorted array: ").split()))
+
+merged = []
+i = j = 0
+
+while i < len(arr1) and j < len(arr2):
+    if arr1[i] < arr2[j]:
+        merged.append(arr1[i])
+        i += 1
+    else:
+        merged.append(arr2[j])
+        j += 1
+
+while i < len(arr1):
+    merged.append(arr1[i])
+    i += 1
+
+while j < len(arr2):
+    merged.append(arr2[j])
+    j += 1
+
+print("Merged Sorted Array:", merged)

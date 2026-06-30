@@ -1,16 +1,13 @@
-#to compress a string
-# String Compression
+#to find common characters in strings
 
-s = input("Enter a string: ")
 
-compressed = ""
-count = 1
+str1 = input("Enter first string: ")
+str2 = input("Enter second string: ")
 
-for i in range(len(s)):
-    if i < len(s) - 1 and s[i] == s[i + 1]:
-        count += 1
-    else:
-        compressed += s[i] + str(count)
-        count = 1
+common = ""
 
-print("Compressed string:", compressed)
+for ch in str1:
+    if ch in str2 and ch not in common:
+        common += ch
+
+print("Common characters:", common)
